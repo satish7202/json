@@ -66,9 +66,11 @@ public class MOJO {
         final GsonBuilder gsonBuilder = new GsonBuilder();
         final Gson gson = gsonBuilder.create();
             String json =gson.toJson(Employe);
-         //  System.out.println(json);
+        System.out.println("ArrayList to Json**********");
+           System.out.println(json);
            //Json to Object List
          MOJO[] Mojobj = gson.fromJson(json, MOJO[].class);
+         System.out.println("Json to Object**********");
          for (int i=0;i<Mojobj.length;i++)
         {
             System.out.println(Mojobj[i].getName()+" "+Mojobj[i].getAge()+" "+Mojobj[i].getSalary());
@@ -90,3 +92,4 @@ public class MOJO {
 
 
 }
+
