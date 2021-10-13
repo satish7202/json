@@ -56,7 +56,7 @@ public class MOJO {
                 Salary = sc.nextInt();
                 MojObj[i].setSalary(Salary);
                 //Normal Display Data using Get Data Method
-                MojObj[i].GetData();
+               // MojObj[i].GetData();
                 //Coverting Object to ArrayList
                 Employe.add(MojObj[i]);
                 
@@ -66,8 +66,27 @@ public class MOJO {
         final GsonBuilder gsonBuilder = new GsonBuilder();
         final Gson gson = gsonBuilder.create();
             String json =gson.toJson(Employe);
-           System.out.println(json);
+         //  System.out.println(json);
            //Json to Object List
          MOJO[] Mojobj = gson.fromJson(json, MOJO[].class);
-         System.out.println(Mojobj);
+         for (int i=0;i<Mojobj.length;i++)
+        {
+            System.out.println(Mojobj[i].getName()+" "+Mojobj[i].getAge()+" "+Mojobj[i].getSalary());
+        }
 
+
+
+
+
+
+    }
+    void GetData()
+    {        //Getter Use to Get Values
+       System.out.println(getName());
+       System.out.println(getAge());
+       System.out.println(getSalary());
+    }
+
+
+
+}
