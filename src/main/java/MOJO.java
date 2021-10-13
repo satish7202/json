@@ -67,8 +67,8 @@ public class MOJO {
             //ArrayList to Json File Using GSON Dependency
            String json = new Gson().toJson(Employe);
            System.out.println(json);
-        // MojObj[2] = new Gson().fromJson(json, MOJO.class);
-       // System.out.println(MojObj[2]);
+         MOJO Mojobj = new Gson().fromJson(json, MOJO.class);
+         //System.out.println(MojObj[2]);
 
 
 
